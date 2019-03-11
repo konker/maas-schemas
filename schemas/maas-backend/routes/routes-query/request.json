@@ -58,8 +58,7 @@
           "$ref": "http://maasglobal.com/core/components/units.json#/definitions/time"
         },
         "modes": {
-          "type": "string",
-          "enum": ["PUBLIC_TRANSIT", "TAXI", "CAR", "WALK", "BICYCLE", "BICYCLE_RENT"]
+          "type": "string"
         },
         "transitMode": {
           "type": "string",
