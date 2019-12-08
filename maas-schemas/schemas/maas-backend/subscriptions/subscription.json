@@ -4,7 +4,7 @@
   "definitions": {
     "subscription": {
       "$ref": "#/definitions/subscriptionBase",
-      "required": ["plan", "addons", "coupons", "changeState"],
+      "required": ["status", "plan", "addons", "coupons", "changeState"],
       "additionalProperties": true
     },
     "subscriptionCreatePayload": {
@@ -22,6 +22,10 @@
       "properties": {
         "id": {
           "$ref": "http://maasglobal.com/maas-backend/subscriptions/contact.json#/definitions/identityId"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "paused", "cancelled"]
         },
         "customerId": {
           "$ref": "http://maasglobal.com/maas-backend/subscriptions/contact.json#/definitions/identityId"
@@ -195,12 +199,18 @@
           },
           "required": ["startTime", "endTime"]
         },
+        "scheduledPause": {
+          "$ref": "http://maasglobal.com/core/components/units.json#/definitions/time"
+        },
+        "scheduledResume": {
+          "$ref": "http://maasglobal.com/core/components/units.json#/definitions/time"
+        },
         "scheduledChanges": {
           "type": "boolean",
           "default": false
         }
       },
-      "required": ["validity"]
+      "required": ["validity", "paused"]
     }
   }
 }

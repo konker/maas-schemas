@@ -1,0 +1,28 @@
+{
+  "$id": "http://maasglobal.com/maas-backend/subscriptions/subscriptions-pause/request.json",
+  "description": "Request schema for subscriptions-pause",
+  "type": "object",
+  "properties": {
+    "customerId": {
+      "$ref": "http://maasglobal.com/core/components/units.json#/definitions/identityId"
+    },
+    "userId": {
+      "$ref": "http://maasglobal.com/core/components/units.json#/definitions/identityId"
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "resumeOn": {
+          "$ref": "http://maasglobal.com/core/components/units.json#/definitions/time"
+        }
+      },
+      "required": ["resumeOn"],
+      "additionalProperties": false
+    },
+    "headers": {
+      "$ref": "http://maasglobal.com/core/components/api-common.json#/definitions/headers"
+    }
+  },
+  "required": ["customerId", "userId", "payload"],
+  "additionalProperties": false
+}
