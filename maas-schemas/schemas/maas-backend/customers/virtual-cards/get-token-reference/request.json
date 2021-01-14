@@ -10,12 +10,10 @@
       "$ref": "http://maasglobal.com/core/components/units.json#/definitions/identityId"
     },
     "virtualCardId": {
-      "type": "integer",
-      "minimum": 1
+      "$ref": "http://maasglobal.com/core/components/units.json#/definitions/uuid"
     },
     "virtualCardTokenReferenceId": {
-      "type": "integer",
-      "minimum": 1
+      "$ref": "http://maasglobal.com/core/components/units.json#/definitions/uuid"
     },
     "headers": {
       "$ref": "http://maasglobal.com/core/components/api-common.json#/definitions/headers"

@@ -10,8 +10,7 @@
       "$ref": "http://maasglobal.com/core/components/units.json#/definitions/identityId"
     },
     "virtualCardId": {
-      "type": "integer",
-      "minimum": 1
+      "$ref": "http://maasglobal.com/core/components/units.json#/definitions/uuid"
     },
     "payload": {
       "type": "object",

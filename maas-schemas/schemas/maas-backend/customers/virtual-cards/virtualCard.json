@@ -4,9 +4,7 @@
   "type": "object",
   "properties": {
     "id": {
-      "type": "number",
-      "minimum": 1,
-      "multipleOf": 1
+      "$ref": "http://maasglobal.com/core/components/units.json#/definitions/uuid"
     },
     "providerName": {
       "type": "string",
