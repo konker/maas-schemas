@@ -65,6 +65,7 @@ export type Itinerary = t.Branded<
     productOptions?: Array<ProductOption_.ProductOption>;
     type?: 'outward' | 'return';
     bookings?: Array<Booking_.Booking>;
+    cancellable?: boolean;
   } & {
     startTime: Defined;
     endTime: Defined;
@@ -90,6 +91,7 @@ export type ItineraryC = t.BrandC<
         productOptions: t.ArrayC<typeof ProductOption_.ProductOption>;
         type: t.UnionC<[t.LiteralC<'outward'>, t.LiteralC<'return'>]>;
         bookings: t.ArrayC<typeof Booking_.Booking>;
+        cancellable: t.BooleanC;
       }>,
       t.TypeC<{
         startTime: typeof Defined;
@@ -117,6 +119,7 @@ export const Itinerary: ItineraryC = t.brand(
       productOptions: t.array(ProductOption_.ProductOption),
       type: t.union([t.literal('outward'), t.literal('return')]),
       bookings: t.array(Booking_.Booking),
+      cancellable: t.boolean,
     }),
     t.type({
       startTime: Defined,
@@ -142,6 +145,7 @@ export const Itinerary: ItineraryC = t.brand(
       productOptions?: Array<ProductOption_.ProductOption>;
       type?: 'outward' | 'return';
       bookings?: Array<Booking_.Booking>;
+      cancellable?: boolean;
     } & {
       startTime: Defined;
       endTime: Defined;

@@ -65,6 +65,10 @@
       "items": {
         "$ref": "http://maasglobal.com/core/booking.json"
       }
+    },
+    "cancellable": {
+      "type": "boolean",
+      "description": "A flag indicating whether this itinerary can be cancelled, possibly subject to other cancellation criteria"
     }
   },
   "additionalProperties": false,
